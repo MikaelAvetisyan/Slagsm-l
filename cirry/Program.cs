@@ -3,11 +3,7 @@ using System.ComponentModel;
 using System.Security.Cryptography;
 using System.Threading;
 
-
 Console.WriteLine("Enter name to play");
-
-
-
 
 string name;
 name = Console.ReadLine();
@@ -18,9 +14,6 @@ int EnemyHp2 = 100;
 int EnemyHuge = 200;
 int EnemyWiz = 80;
 
-
-
-
 Console.WriteLine($"{name}, You entered a cave because you need some xp.");
     Console.WriteLine("You have 3 paths to take. Which one do you take?");
         Console.WriteLine("Path 1");
@@ -28,20 +21,12 @@ Console.WriteLine($"{name}, You entered a cave because you need some xp.");
         Console.WriteLine("Path 3");
         Console.WriteLine();
 
-
-
-
 paths = Console.ReadLine().Trim().ToUpper();
-
-
 
 
 if (paths == "PATH 1" || paths == "1")
 {
     Console.WriteLine("This path is very narrow, but you still got through it with ease, now you stumbled across 2 skeletons; they seemed ready to fight, so you took your stance");
-
-
-
 
     while (Hp > 0 && (EnemyHp > 0 || EnemyHp2 > 0))
     {
@@ -53,15 +38,7 @@ if (paths == "PATH 1" || paths == "1")
         Console.WriteLine("Run = try to escape");
         Console.WriteLine();
 
-
-
-
-
-
         string choise = Console.ReadLine().Trim().ToUpper();
-
-
-
 
         if (choise == "ATTACK")
         {
@@ -79,17 +56,11 @@ if (paths == "PATH 1" || paths == "1")
                 Hp -= 10;
             }
 
-
-
-
             else if (AttackType == "HEAVY ATTACK" || AttackType == "HEAVY")
             {
                 Console.WriteLine("Heavy attack!");
                 Random r = new Random();
                 int ra = r.Next(1, 3);
-
-
-
 
                 if (ra == 1)
                 {
@@ -100,9 +71,6 @@ if (paths == "PATH 1" || paths == "1")
                     EnemyHp -= 40;
                     EnemyHp2 -= 40;
                 }
-
-
-
 
                 else if (ra == 2)
                 {
@@ -115,30 +83,13 @@ if (paths == "PATH 1" || paths == "1")
                     Hp -= 30;
                 }
 
-
-
-
             }
         }
-
-
-
-
-
-
-
 
         else if (choise == "HEALING POTION")
         {
             Random random = new Random();
             int number = random.Next(1, 5);
-
-
-
-
-
-
-
 
             if (number == 1)
             {
@@ -148,13 +99,6 @@ if (paths == "PATH 1" || paths == "1")
                 Hp += 20;
             }
 
-
-
-
-
-
-
-
             else if (number == 2)
             {
                 Console.WriteLine();
@@ -163,9 +107,6 @@ if (paths == "PATH 1" || paths == "1")
                 Hp += 40;
             }
 
-
-
-
             else if (number == 3)
             {
                 Console.WriteLine();
@@ -173,9 +114,6 @@ if (paths == "PATH 1" || paths == "1")
                 Console.WriteLine();
                 Hp -= 20;
             }
-
-
-
 
             else if (number == 4)
             {
@@ -186,9 +124,6 @@ if (paths == "PATH 1" || paths == "1")
             }
         }
 
-
-
-
         else if (choise == "PARRY")
         {
             Console.WriteLine();
@@ -196,13 +131,6 @@ if (paths == "PATH 1" || paths == "1")
             Console.WriteLine();
             Hp -= 8;
         }
-
-
-
-
-
-
-
 
         else if (choise == "RUN")
         {
@@ -213,17 +141,11 @@ if (paths == "PATH 1" || paths == "1")
             Hp -= 20;
         }
 
-
-
-
         else
         {
             Console.WriteLine();
             Console.WriteLine("Emmm..... No, try again");
         }
-
-
-
 
         if (Hp <= 0)
         {
@@ -233,9 +155,6 @@ if (paths == "PATH 1" || paths == "1")
             break;
         }
 
-
-
-
         else if (EnemyHp <= 0 && EnemyHp2 <= 0)
         {
             Console.WriteLine();
@@ -244,41 +163,14 @@ if (paths == "PATH 1" || paths == "1")
             break;
         }
 
-
-
-
     }
 
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
 
 else if (paths == "PATH 2" || paths == "2")
 {
 
-
-
-
     Console.WriteLine("You went through path 2, the cave entrance was really big, but you really didn't think about it");
-
-
-
 
     while (Hp > 0 && (EnemyHuge > 0))
     {
@@ -290,15 +182,7 @@ else if (paths == "PATH 2" || paths == "2")
         Console.WriteLine("Run = try to escape");
         Console.WriteLine();
 
-
-
-
-
-
         string choise1 = Console.ReadLine().Trim().ToUpper();
-
-
-
 
         if (choise1 == "ATTACK")
         {
@@ -314,17 +198,11 @@ else if (paths == "PATH 2" || paths == "2")
                 Hp -= 10;
             }
 
-
-
-
             else if (AttackType == "HEAVY ATTACK" || AttackType == "HEAVY")
             {
                 Console.WriteLine("Heavy attack!");
                 Random r = new Random();
                 int ra = r.Next(1, 3);
-
-
-
 
                 if (ra == 1)
                 {
@@ -334,9 +212,6 @@ else if (paths == "PATH 2" || paths == "2")
                     Console.WriteLine();
                     EnemyHuge -= 40;
                 }
-
-
-
 
                 else if (ra == 2)
                 {
@@ -348,30 +223,13 @@ else if (paths == "PATH 2" || paths == "2")
                     Hp -= 25;
                 }
 
-
-
-
             }
         }
-
-
-
-
-
-
-
 
         else if (choise1 == "HEALING POTION")
         {
             Random random = new Random();
             int number = random.Next(1, 5);
-
-
-
-
-
-
-
 
             if (number == 1)
             {
@@ -381,13 +239,6 @@ else if (paths == "PATH 2" || paths == "2")
                 Hp += 20;
             }
 
-
-
-
-
-
-
-
             else if (number == 2)
             {
                 Console.WriteLine();
@@ -396,9 +247,6 @@ else if (paths == "PATH 2" || paths == "2")
                 Hp += 40;
             }
 
-
-
-
             else if (number == 3)
             {
                 Console.WriteLine();
@@ -406,9 +254,6 @@ else if (paths == "PATH 2" || paths == "2")
                 Console.WriteLine();
                 Hp -= 20;
             }
-
-
-
 
             else if (number == 4)
             {
@@ -419,9 +264,6 @@ else if (paths == "PATH 2" || paths == "2")
             }
         }
 
-
-
-
         else if (choise1 == "PARRY")
         {
             Console.WriteLine();
@@ -429,13 +271,6 @@ else if (paths == "PATH 2" || paths == "2")
             Console.WriteLine();
             Hp -= 10;
         }
-
-
-
-
-
-
-
 
         else if (choise1 == "RUN")
         {
@@ -446,21 +281,14 @@ else if (paths == "PATH 2" || paths == "2")
             Hp -= 20;
         }
 
-
-
-
         if (Hp <= 0)
         {
             Console.WriteLine();
             Console.WriteLine("You Lose! Your health dropped to zero.");
-            Console.WriteLine("Skill issue");
             Console.WriteLine();
             Console.ReadLine();
             break;
         }
-
-
-
 
         else if (EnemyHuge <= 0)
         {
@@ -473,19 +301,9 @@ else if (paths == "PATH 2" || paths == "2")
     }
 }
 
-
-
-
-
-
-
-
 else if (paths == "PATH 3" || paths == "3")
 {
     Console.WriteLine("The path was normally sized. At the end of the tunnel, you stumble across a skeleton with a big stick. The stick has a big blue orb levitating on the top of the staff");
-
-
-
 
     while (Hp > 0 && (EnemyHp > 0 || EnemyHp2 > 0))
     {
@@ -497,15 +315,7 @@ else if (paths == "PATH 3" || paths == "3")
         Console.WriteLine("Run = try to escape");
         Console.WriteLine();
 
-
-
-
-
-
         string choise = Console.ReadLine().Trim().ToUpper();
-
-
-
 
         if (choise == "ATTACK")
         {
@@ -521,9 +331,6 @@ else if (paths == "PATH 3" || paths == "3")
                 Hp -= 100;
             }
 
-
-
-
             else if (AttackType == "HEAVY ATTACK" || AttackType == "HEAVY")
             {
                 Console.WriteLine();
@@ -531,9 +338,6 @@ else if (paths == "PATH 3" || paths == "3")
                 Console.WriteLine();
                 Random r = new Random();
                 int ra = r.Next(1, 3);
-
-
-
 
                 if (ra == 1)
                 {
@@ -543,9 +347,6 @@ else if (paths == "PATH 3" || paths == "3")
                     Console.WriteLine();
                     EnemyWiz -= 40;
                 }
-
-
-
 
                 else if (ra == 2)
                 {
@@ -557,30 +358,13 @@ else if (paths == "PATH 3" || paths == "3")
                     Hp -= 100;
                 }
 
-
-
-
             }
         }
-
-
-
-
-
-
-
 
         else if (choise == "HEALING POTION")
         {
             Random random = new Random();
             int number = random.Next(1, 5);
-
-
-
-
-
-
-
 
             if (number == 1)
             {
@@ -590,13 +374,6 @@ else if (paths == "PATH 3" || paths == "3")
                 Hp += 20;
             }
 
-
-
-
-
-
-
-
             else if (number == 2)
             {
                 Console.WriteLine();
@@ -605,9 +382,6 @@ else if (paths == "PATH 3" || paths == "3")
                 Hp += 40;
             }
 
-
-
-
             else if (number == 3)
             {
                 Console.WriteLine();
@@ -615,9 +389,6 @@ else if (paths == "PATH 3" || paths == "3")
                 Console.WriteLine();
                 Hp -= 20;
             }
-
-
-
 
             else if (number == 4)
             {
@@ -628,9 +399,6 @@ else if (paths == "PATH 3" || paths == "3")
             }
         }
 
-
-
-
         else if (choise == "PARRY")
         {
             Console.WriteLine();
@@ -638,13 +406,6 @@ else if (paths == "PATH 3" || paths == "3")
             Console.WriteLine();
             Hp -= 25;
         }
-
-
-
-
-
-
-
 
         else if (choise == "RUN")
         {
@@ -655,9 +416,6 @@ else if (paths == "PATH 3" || paths == "3")
             Hp -= 100;
         }
 
-
-
-
         if (Hp <= 0)
         {
             Console.WriteLine();
@@ -666,9 +424,6 @@ else if (paths == "PATH 3" || paths == "3")
             Console.ReadLine();
             break;
         }
-
-
-
 
         else if (EnemyWiz <= 0)
         {
@@ -681,13 +436,9 @@ else if (paths == "PATH 3" || paths == "3")
     }
 }
 
-
 else
 {
     Console.WriteLine();
     Console.WriteLine("Emmm... no try again");
     Console.ReadLine();
 }
-
-
-
