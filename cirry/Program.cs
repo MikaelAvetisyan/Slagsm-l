@@ -6,8 +6,9 @@ using System.Threading;
 Console.WriteLine("Enter name to play");
 
 string name;
-name = Console.ReadLine();
 string paths;
+name = Console.ReadLine();
+
 int Hp = 120;
 int EnemyHp = 100;
 int EnemyHp2 = 100;
